@@ -22,7 +22,7 @@ html {
     html {
       font-size: 37.5%; } }
 
-@media screen and (min-height: 45rem) and (max-width: 37.5em) {
+@media screen and (min-height: 45rem) and (min-width: 37.5em) {
   html,
   body {
     height: 100%;
