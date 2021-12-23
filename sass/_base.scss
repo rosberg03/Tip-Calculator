@@ -55,7 +55,7 @@ html {
 
 html,
 body {
-    @media screen and (min-height: 45rem) {
+    @media screen and (min-height: 45rem) and (max-width: $bp-small) {
         height: 100%;
         overflow: hidden;
     }

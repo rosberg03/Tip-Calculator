@@ -39,7 +39,7 @@ const getPercentage = () => {
 const computeTip = () => {
     const percentage = getPercentage();
     const bill = Number(billAmount.value);
-    const people = peopleAmount.value ? Number(peopleAmount.value) : 1;
+    const people = Number(peopleAmount.value);
 
     let tip = percentage / 100 * bill;
     let total = tip + bill;
@@ -50,15 +50,13 @@ const computeTip = () => {
     tip = tip > 100.00 ? tip.toFixed(0) : tip.toFixed(2);
     total = total > 100.00 ? total.toFixed(0) : total.toFixed(2);
 
-    tipAmount.innerHTML = tip;
-    totalAmount.innerHTML = total;
+    tipAmount.innerHTML = tip == 69.00 ? 'NICE' : tip;
+    totalAmount.innerHTML = total == 69.00 ? 'NICE' : total;
 
     if (!hasEdited) {
         btnReset.classList.add('pressable');
         hasEdited = true;
     }
-
-    console.log(bill);
 };
 
 
@@ -122,7 +120,7 @@ peopleAmount.addEventListener('input', () => {
 btnReset.addEventListener('click', () => {
     if(hasEdited) {
         billAmount.value = '';
-        peopleAmount.value = '';
+        peopleAmount.value = '1';
         radioCustom.value = '';
         radioCustom.classList.remove('selected');
 
