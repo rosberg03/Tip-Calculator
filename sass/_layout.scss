@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    padding: 10rem;
+
+    @media screen and (max-width: $bp-small) {
+        padding: 5rem 10rem;
+        gap: 5rem;
+    }
+
+    @media screen and (max-width: $bp-smallest) {
+        padding: 5rem 0;
+    }
+}
+
+.main-container {
+    max-width: 92rem;
+    width: auto;
+    border-radius: 2.5rem;
+    background-color: $color-white;
+    padding: 3rem;
+
+    display: flex;
+    gap: 3rem;
+
+    @media screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+}

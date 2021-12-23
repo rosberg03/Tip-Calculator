@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1 class="heading-1">SPLI TTER</h1>
+
+  <main class="main-container">
+    <form class="panel">
+      <div class="input">
+        <label for="bill" class="panel__label">Bill</label>
+        <input type="number" class="input__field number-picker" id="bill" min="0.00" placeholder="0.00">
+        <img src="images/icon-dollar.svg" alt="$" class="input__icon">
+      </div>
+       
+      <div>
+        <label class="panel__label">Select Tip %</label>
+        <div class="radio-selector" autocomplete="off">
+          <input type="radio" id="radio-1" class="radio-selector__radio" name="tip-amount">
+          <label for="radio-1" id="radio-l-1" tabindex=0 class="radio-selector__btn">5%</label>
+    
+          <input type="radio" id="radio-2" class="radio-selector__radio" name="tip-amount">
+          <label for="radio-2" id="radio-l-2" tabindex=0 class="radio-selector__btn">10%</label>
+    
+          <input type="radio" id="radio-3" class="radio-selector__radio" name="tip-amount">
+          <label for="radio-3" id="radio-l-3" tabindex=0 class="radio-selector__btn">15%</label>
+    
+          <input type="radio" id="radio-4" class="radio-selector__radio" name="tip-amount">
+          <label for="radio-4" id="radio-l-4" tabindex=0 class="radio-selector__btn">25%</label>
+    
+          <input type="radio" id="radio-5" class="radio-selector__radio" name="tip-amount">
+          <label for="radio-5" id="radio-l-5" tabindex=0 class="radio-selector__btn">50%</label>
+
+          <input type="text" id="radio-custom" class="radio-selector__custom number-picker" placeholder="Custom" min="0" max="1000">
+        </div>
+      </div>
+      
+      <div class="input">
+        <label for="people" class="panel__label">Number of People</label>
+        <input type="number" class="input__field number-picker" id="people" min="0.00" placeholder="1">
+        <img src="images/icon-person.svg" alt="P" class="input__icon">
+      </div>
+    </form>
+    <div class="display">
+      <div class="display__tag">
+        <h2 class="heading-2">Tip Amount</h2>
+        <span>/ person</span>
+      </div>
+      <div class="display__amount">
+        $<span id="tip-amount">0.00</span>
+      </div>
+
+      <div class="display__tag">
+        <h2 class="heading-2">Total</h2>
+        <span>/ person</span>
+      </div>
+      <div class="display__amount">
+        $<span id="total-amount">0.00</span>
+      </div>
+
+      <button class="display__btn" id="btn-reset">
+        RESET
+      </button>
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">rosberg03</a>.
+  </div>
+</body>
+</html>
